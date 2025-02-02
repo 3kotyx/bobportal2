@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bob's Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen video background */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Make sure it's behind other content */
+    }
+
+    /* Button container positioning */
+    .button-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10; /* Ensures button is above the video */
+    }
+
+    /* Base button styling */
+    .video-button {
+      width: 256px;
+      height: 256px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Button content: WebP image */
+    .video-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Video background -->
+  <video class="video-background" autoplay muted loop>
+    <source src="./background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Button container -->
+  <div class="button-container">
+    <button class="video-button" onclick="bobthing1()">
+      <!-- Simple WebP image for the button -->
+      <img src="./aperture.webp" alt="Button">
+    </button>
+  </div>
+
+  <script>
+    function bobthing1() {
+        alert("AWAITING FURTHER RADIO DATA")
+    }
+  </script>
+
+</body>
+</html>
